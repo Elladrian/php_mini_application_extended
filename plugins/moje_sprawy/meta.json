@@ -1,0 +1,7 @@
+{
+    "name": "my_cases",
+    "display_name": "Moje Sprawy",
+    "version": "1.0.0",
+    "entry_class": "Plugins\\MyCases\\MyCasesPlugin",
+    "main_file": "src/MyCasesPlugin.php"
+}

@@ -1,0 +1,7 @@
+{
+    "name": "faq_module",
+    "display_name": "Pytania i Odpowiedzi",
+    "version": "1.0.0",
+    "entry_class": "Plugins\\Faq\\FaqPlugin",
+    "main_file": "src/FaqPlugin.php"
+}

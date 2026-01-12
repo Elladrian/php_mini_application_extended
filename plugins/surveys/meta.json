@@ -1,0 +1,7 @@
+{
+    "name": "surveys",
+    "display_name": "Ankiety i Ewaluacje",
+    "version": "1.0.0",
+    "entry_class": "Plugins\\Surveys\\SurveysPlugin",
+    "main_file": "src/SurveysPlugin.php"
+}

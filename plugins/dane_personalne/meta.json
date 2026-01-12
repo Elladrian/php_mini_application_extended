@@ -1,0 +1,7 @@
+{
+    "name": "personal_data",
+    "display_name": "Dane Personalne",
+    "version": "1.0.0",
+    "entry_class": "Plugins\\PersonalData\\PersonalDataPlugin",
+    "main_file": "src/PersonalDataPlugin.php"
+}

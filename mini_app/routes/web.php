@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Offer;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use App\Http\Controllers\PluginController;
 
 Route::get('/', function () {
     return redirect()->route('dashboard');
@@ -49,6 +50,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/plugins', [PluginController::class, 'index'])->name('plugins.index');
+    Route::post('/plugins', [PluginController::class, 'store'])->name('plugins.store');
+    Route::post('/plugins/{id}/toggle', [PluginController::class, 'toggle'])->name('plugins.toggle');
+
+    Route::get('/app/plugin/{name}', [PluginController::class, 'show'])->name('plugin.show');
+
+    Route::delete('/plugins/{id}', [PluginController::class, 'destroy'])->name('plugins.destroy');
 });
 
 Route::get('/email-test', function () {
